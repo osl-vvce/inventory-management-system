@@ -1,0 +1,24 @@
+.quantity {
+    margin: auto;
+}
+
+.btn-minus, .btn-plus{
+    width: auto;
+}
+
+.card-footer {
+    padding: 0 !important;
+}
+
+.btn-add {
+    margin: 0;
+    margin-left: 43px;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.card-title, .card-text, .list-group-item {
+    text-align: center;
+}
