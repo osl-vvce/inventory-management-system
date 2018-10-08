@@ -14,16 +14,22 @@
     <link rel="icon" type="image/icon" href="images/logo/warehouse.png">
 
   </head>
+
   <body>
+
+      <form class="search">
+        <input type="text" name="Search" placeholder="Search" autocomplete="off">
+      </form>
+
         <div class="card d-inline-block" style="width: 12rem;">
                 <img class="card-img-top" src="images/boards/ArduinoUno.png" alt="Card image cap">
                   <h5 class="card-title">Arduino Uno</h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Available 8</li>
                   <span class="quantity">
-                      <button type="button" class="btn btn-primary btn-minus">-</button>
-                      <span class="quantity">0</span>
-                      <button type="button" class="btn btn-primary btn-plus">+</button>
+                      <button type="button" class="btn btn-primary btn-minus" onclick="minus()">-</button>
+                      <span class="quantity"><input type="number" id="number" value="0" class="textbox"></span>
+                      <button type="button" class="btn btn-primary btn-plus" onclick="plus()">+</button>
                   </span>
                 </ul>
                 <div class="card-footer">
@@ -39,9 +45,9 @@
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Available 8</li>
                   <span class="quantity">
-                      <button type="button" class="btn btn-primary btn-minus">-</button>
-                      <span class="quantity">0</span>
-                      <button type="button" class="btn btn-primary btn-plus">+</button>
+                      <button type="button" class="btn btn-primary btn-minus" onclick="minus()">-</button>
+                      <span class="quantity"><input type="number" id="number" value="0" class="textbox"></span>
+                      <button type="button" class="btn btn-primary btn-plus" onclick="plus()">+</button>
                   </span>
                 </ul>
                 <div class="card-footer">
@@ -57,9 +63,9 @@
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Available 8</li>
                   <span class="quantity">
-                      <button type="button" class="btn btn-primary btn-minus">-</button>
-                      <span class="quantity">0</span>
-                      <button type="button" class="btn btn-primary btn-plus">+</button>
+                      <button type="button" class="btn btn-primary btn-minus" onclick="minus()">-</button>
+                      <span class="quantity"><input type="number" id="number" value="0" class="textbox"></span>
+                      <button type="button" class="btn btn-primary btn-plus" onclick="plus()">+</button>
                   </span>
                 </ul>
                 <div class="card-footer">
@@ -74,5 +80,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+    function plus(){
+      document.getElementById("number").stepUp();
+    }
+    function minus(){
+      document.getElementById("number").stepUp(-1);
+    }
+  </script>
+
   </body>
 </html>
