@@ -9,12 +9,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Inventory</title>
+    <!-- link of image on title bar-->
+    <link rel="icon" type="image/icon" href="images/logo/warehouse.png">
+
   </head>
   <body>
         <div class="card d-inline-block" style="width: 12rem;">
-                <img class="card-img-top" src="nodemcu.png" alt="Card image cap">
-                  <h5 class="card-title">NodeMCU</h5>
+                <img class="card-img-top" src="images/boards/ArduinoUno.png" alt="Card image cap">
+                  <h5 class="card-title">Arduino Uno</h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Available 8</li>
                   <span class="quantity">
@@ -30,6 +33,41 @@
                 </div>
               </div>
               
+              <div class="card d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="images/boards/nodemcu.png" alt="Card image cap">
+                  <h5 class="card-title">NodeMCU</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Available 8</li>
+                  <span class="quantity">
+                      <button type="button" class="btn btn-primary btn-minus">-</button>
+                      <span class="quantity">0</span>
+                      <button type="button" class="btn btn-primary btn-plus">+</button>
+                  </span>
+                </ul>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary btn-add">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+
+              <div class="card d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="images/boards/Raspberry_Pi_3.png" alt="Card image cap">
+                  <h5 class="card-title">Raspberry Pi</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Available 8</li>
+                  <span class="quantity">
+                      <button type="button" class="btn btn-primary btn-minus">-</button>
+                      <span class="quantity">0</span>
+                      <button type="button" class="btn btn-primary btn-plus">+</button>
+                  </span>
+                </ul>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary btn-add">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
