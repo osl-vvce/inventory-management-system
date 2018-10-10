@@ -1,6 +1,3 @@
-/*
-    DEMO STYLE
-*/
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -199,3 +196,126 @@ a.article:hover {
 #menu{
     align-self: auto;
 }
+
+/*--------------------------------------------------
+CARDS STYLE
+---------------------------------------------------*/
+ 
+  #wrapper {
+    width: 100%;
+  }
+  
+  .product-card {
+    text-align: center;
+    width: 280px;
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 40px;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+    border-radius: 0 10px 0 0;
+  }
+  .product-card span.tag {
+    position: absolute;
+    left: 0px;
+    width: 40px;
+    height: 50px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+  }
+  .product-card span.tag:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 60px 0 0;
+    border-color: #264989 transparent transparent transparent;
+  }
+  .product-card h2 {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    color: #323232;
+    padding: 0px;
+    margin: 30px 0 0;
+  }
+  .product-card h4 {
+    width: 100%;
+    font-size: 14px;
+    padding: 0px;
+    margin: 5px 0 0;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #bbb;
+  }
+  .product-card figure {
+    width: 100%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+  }
+  .product-card figure img {
+    display: inline-block;
+    max-width: 80%;
+    margin: 30px 0;
+  }
+  .product-card .price {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 36px;
+    display: block;
+    font-weight: 400;
+  }
+  .product-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.3);
+  }
+  .cart {
+    padding: 0 50px;
+    font-size: 20px;
+    color: #111;
+    background: #feca16;
+    border-radius: 10px;
+    cursor:pointer;
+  }
+  .item {
+    font-size: 24px;
+  }
+  .quantity {
+    height: 40px;
+    width: 40%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .minus, .plus {
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    background: none;
+    border: solid #264989 2px;
+    border-radius: 50px;
+    cursor:pointer;
+  }
+  
+  button:focus {outline:0;}
+  
+  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+    
