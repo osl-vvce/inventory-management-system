@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Inventory Management</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="start()">
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>Products</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Categories</p>
+                <li class="active">
+                    <a href="#" onclick="boards(); return false;">Boards</a>
+                    
+        
+                </li>
+                <li>
+                    <a href="#" onclick="sensors(); return false;">Sensors</a>
+                    
+                </li>
+                <li>
+                    <a href="#" onclick="cables(); return false;">Cables</a>
+                </li>
+                <li>
+                    <a href="#" onclick="extras(); return false;">Extras</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-justify"></i>
+                        <span>Inventory</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="menu" class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" onclick="requests(); return false;">Requests</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="users(); return false;"><i class="fas fa-user"></i></i> User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="cart(); return false;"><i class="fas fa-cart-plus"></i></i> Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container" id="boards">
+    
+            <h2>Boards</h2>
+
+                <div class="product-card">
+                        <span class="tag">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        </span>
+                        <h2>NodeMCU</h2>
+                        <h4>ESP8266 Wi-Fi SoC</h4>
+                        <figure>
+                            <img src="https://raw.githubusercontent.com/osl-vvce/inventory-management-system/master/images/boards/nodemcu.png" alt="board" />
+                            <span class="item">Available:</span>
+                            <span class="item-max">8</span>
+                        </figure>
+                            <button class="minus" data-quantity="minus" data-field="quantity">
+                              −
+                            </button>
+                            <input class="quantity" name="quantity" value="0" type="number">
+                            <button class="plus" data-quantity="plus" data-field="quantity">
+                               +
+                            </button>
+                                <span class="price">
+                                  <button class="cart">
+                                    Add to Cart
+                                 </button>
+                            </span> 
+                    </div>
+
+                    <div class="product-card">
+                            <span class="tag">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            </span>
+                            <h2>Arduino UNO</h2>
+                            <h4>ATmega328P</h4>
+                            <figure>
+                                <img src="https://www.arduino.cc/en/uploads/Tutorial/ArduinoUNO_bb.png" alt="board" height="120px;"/>
+                                <span class="item">Available:</span>
+                                <span class="item-max">4</span>
+                            </figure>
+                                <button class="minus" data-quantity="minus" data-field="quantity">
+                                  −
+                                </button>
+                                <input class="quantity" name="quantity" value="0" type="number">
+                                <button class="plus" data-quantity="plus" data-field="quantity">
+                                   +
+                                </button>
+                                    <span class="price">
+                                      <button class="cart">
+                                        Add to Cart
+                                     </button>
+                                </span> 
+                        </div>
+
+                        <div class="product-card">
+                                <span class="tag">
+                                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                </span>
+                                <h2>Raspberry Pi</h2>
+                                <h4>‎Broadcom BCM2837B0</h4>
+                                <figure>
+                                    <img src="http://fritzing.org/media/fritzing-repo/projects/r/raspberry-pi-3/images/Capture.PNG" alt="board" height="120px;"/>
+                                    <span class="item">Available:</span>
+                                    <span class="item-max">6</span>
+                                </figure>
+                                    <button class="minus" data-quantity="minus" data-field="quantity">
+                                      −
+                                    </button>
+                                    <input class="quantity" name="quantity" value="0" type="number">
+                                    <button class="plus" data-quantity="plus" data-field="quantity">
+                                       +
+                                    </button>
+                                        <span class="price">
+                                          <button class="cart">
+                                            Add to Cart
+                                         </button>
+                                    </span> 
+                            </div>
+            <div class="line"></div>
+        </div>
+        <div class="container"id="sensors">
+    
+            <h2>Sensors</h2>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+
+            <div class="line"></div>
+        </div>
+        <div class="container"id="cables">
+    
+            <h2>Cables</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+        </div>
+        <div class="container"id="extras">
+    
+            <h2>Extras</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+        </div>
+        <div class="container"id="requests">
+    
+                <h1>Requests</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+                <div class="line"></div>
+        </div>
+            <div class="container"id="users">
+    
+                    <h1>Users</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+                    <div class="line"></div>
+            </div>
+            <div class="container"id="cart">
+    
+                    <h1>Cart</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+                    <div class="line"></div>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+    <script>
+        function boards() {
+            start();
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function sensors() {
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "none";
+            y.style.display = "block";
+            z.style.display = "none";
+            w.style.display = "none";
+            u.style.display = "none";
+            v.style.display = "none";
+            s.style.display = "none";
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function cables() {
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "block";
+            w.style.display = "none";
+            u.style.display = "none";
+            v.style.display = "none";
+            s.style.display = "none";
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function extras() {
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "none";
+            w.style.display = "block";
+            u.style.display = "none";
+            v.style.display = "none";
+            s.style.display = "none";
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function requests() {
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "none";
+            w.style.display = "none";
+            u.style.display = "block";
+            v.style.display = "none";
+            s.style.display = "none";
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function users() {
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "none";
+            w.style.display = "none";
+            u.style.display = "none";
+            v.style.display = "block";
+            s.style.display = "none";
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function cart() {
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "none";
+            w.style.display = "none";
+            u.style.display = "none";
+            v.style.display = "none";
+            s.style.display = "block";
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+           
+        }
+        function start(){
+            var x = document.getElementById("boards");
+            var y = document.getElementById("sensors");
+            var z = document.getElementById("cables");
+            var w = document.getElementById("extras");
+            var u = document.getElementById("requests");
+            var v = document.getElementById("users");
+            var s = document.getElementById("cart");
+            x.style.display = "block";
+            y.style.display = "none";
+            z.style.display = "none";
+            w.style.display = "none";
+            u.style.display = "none";
+            v.style.display = "none";
+            s.style.display = "none";
+            
+        }
+        
+        </script>
+        <script>
+            jQuery(document).ready(function(){
+    // This button will increment the value
+    $('[data-quantity="plus"]').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('data-field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal)) {
+            // Increment
+            $('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+    // This button will decrement the value till 0
+    $('[data-quantity="minus"]').click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('data-field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 0 && currentVal < $( ".item-max" )) {
+            // Decrement one
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+});
+
+
+        </script>
+</body>
+
+</html>
